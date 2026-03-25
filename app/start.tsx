@@ -1,8 +1,8 @@
-import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
-import { useRouter } from 'expo-router';
 import { YellowScreenLayout } from '@/components/layouts';
-import { PrimaryButton, SecondaryButton } from '@/components/ui';
+import { PrimaryButton } from '@/components/ui';
+import { useRouter } from 'expo-router';
+import React from 'react';
+import { Image, StyleSheet, View } from 'react-native';
 
 export default function StartScreen() {
   const router = useRouter();
@@ -12,9 +12,6 @@ export default function StartScreen() {
     router.push('/(tabs)');
   };
 
-  const handleGoogleLogin = () => {
-    console.log('Continue with Google');
-  };
 
   return (
     <YellowScreenLayout>
@@ -29,10 +26,6 @@ export default function StartScreen() {
         <PrimaryButton
           label="Continue with Wallet"
           onPress={handleWalletLogin}
-        />
-        <SecondaryButton
-          label="Continue with Google"
-          onPress={handleGoogleLogin}
         />
       </View>
     </YellowScreenLayout>

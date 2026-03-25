@@ -1,10 +1,10 @@
-import React from 'react';
-import { View, Text, StyleSheet, Pressable, ScrollView } from 'react-native';
-import { useRouter } from 'expo-router';
 import { WhiteScreenLayout } from '@/components/layouts';
-import { Card, ProgressBar } from '@/components/ui';
+import { ProgressBar } from '@/components/ui';
 import { Colors } from '@/constants/colors';
 import { Typography } from '@/constants/typography';
+import { useRouter } from 'expo-router';
+import React from 'react';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 export default function ProfileDemoScreen() {
   const router = useRouter();
@@ -48,7 +48,7 @@ export default function ProfileDemoScreen() {
         <View style={styles.cardsContainer}>
           <Text style={styles.sectionTitle}>Available Roles</Text>
           
-          <Card>
+          <View style={styles.card}>
             <Text style={styles.cardTitle}>Observer</Text>
             <Text style={styles.cardDescription}>
               Monitor and report on election processes
@@ -56,9 +56,9 @@ export default function ProfileDemoScreen() {
             <Pressable style={styles.seeRolesButton}>
               <Text style={styles.buttonText}>View Details</Text>
             </Pressable>
-          </Card>
+          </View>
 
-          <Card>
+          <View style={styles.card}>
             <Text style={styles.cardTitle}>Validator</Text>
             <Text style={styles.cardDescription}>
               Validate election results and data
@@ -66,7 +66,7 @@ export default function ProfileDemoScreen() {
             <Pressable style={styles.seeRolesButton}>
               <Text style={styles.buttonText}>View Details</Text>
             </Pressable>
-          </Card>
+          </View>
         </View>
       </View>
     </WhiteScreenLayout>
@@ -135,6 +135,15 @@ const styles = StyleSheet.create({
   cardsContainer: {
     marginTop: 30,
     width: 310,
+  },
+  card: {
+    backgroundColor: Colors.neutral.white,
+    borderColor: Colors.neutral.borderGray,
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 16,
+    marginVertical: 8,
+    width: '100%',
   },
   cardTitle: {
     fontSize: Typography.sizes.lg,

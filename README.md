@@ -24,13 +24,3 @@ En la salida, encontrarás opciones para abrir la aplicación en
 - [Expo Go](https://expo.dev/go), una zona de pruebas limitada para probar el desarrollo de aplicaciones con Expo
 
 Puedes comenzar a desarrollar editando los archivos dentro del directorio **app**. Este proyecto utiliza [enrutamiento basado en archivos](https://docs.expo.dev/router/introduction).
-
-## Obtén un proyecto nuevo
-
-Cuando estés listo, ejecuta:
-
-```bash
-npm run reset-project
-```
-
-Este comando moverá el código de inicio al directorio **app-example** y creará un directorio **app** en blanco donde puedas comenzar a desarrollar.
